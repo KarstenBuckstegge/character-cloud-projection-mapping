@@ -1,0 +1,47 @@
+/* BASE COLORS */
+.lightblue {
+    fill: #75d2fc;
+}
+.white {
+    fill: #fff;
+}
+.green {
+    fill: #23af94;
+}
+.grey {
+    fill: #5c6670;
+}
+.red {
+    fill: #ed7069;
+}
+.lightgrey {
+    fill: #bcc8d3;
+}
+.yellow {
+    fill: #f5b976;
+}
+.salmon {
+    fill: #edad99;
+}
+.brown {
+    fill: #664d31;
+}
+.orange {
+    fill: #f4805b;
+}
+.turqouis {
+    fill: #91d8d6;
+}
+.blue {
+    fill: #0b5999;
+}
+
+/* CLASS DEFINITIONS */
+
+#character-cloud * {
+    transform-origin: center;
+}
+
+.character {
+    transition: opacity .6s ease;
+}
