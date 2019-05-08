@@ -1,24 +1,3 @@
-// const animation = () => {
-//     // TweenMax.to("#character-cloud", 2, {
-//     //     ease: SteppedEase.config(12),
-//     //     filter: 100
-//     // });
-// }
-
-
-// setTimeout(animation ,1000);
-
-// window.voice = new Wad({
-//     source  : 'mic'
-// })
-
-
-
-
-
-
-
-
 (function() {
     const useInputMedia = stream => {
         // AUDIO API INIT
