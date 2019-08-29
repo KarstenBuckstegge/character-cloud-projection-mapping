@@ -1,0 +1,111 @@
+$lightblue: #75d2fc;
+$white: #fff;
+$green: #23af94;
+$grey: #5c6670;
+$red: #ed7069;
+$lightgrey: #bcc8d3;
+$yellow: #f5b976;
+$salmon: #edad99;
+$brown: #664d31;
+$orange: #f4805b;
+$turqouis: #91d8d6;
+$blue: #0b5999;
+
+/* BASE COLORS */
+.lightblue {
+    fill: $lightblue;
+}
+.white {
+    fill: $white;
+}
+.green {
+    fill: $green;
+}
+.grey {
+    fill: $grey;
+}
+.red {
+    fill: $red;
+}
+.lightgrey {
+    fill: $lightgrey;
+}
+.yellow {
+    fill: $yellow;
+}
+.salmon {
+    fill: $salmon;
+}
+.brown {
+    fill: $brown;
+}
+.orange {
+    fill: $orange;
+}
+.turqouis {
+    fill: $turqouis;
+}
+.blue {
+    fill: $blue;
+}
+
+.character-cloud {
+    * {
+        animation-duration: inherit;
+    }
+}
+
+.control {
+    padding: 8px 32px;
+}
+
+%animate {
+    animation-direction: alternate;
+    animation-duration: inherit;
+    animation-iteration-count: infinite;
+}
+
+// ============ ANIMATION DEFINITIONS ============
+// (Starts with 3 because 1 and 2 are speed controls)
+
+.animation--3 {
+    .outline path {
+        stroke-dasharray: 300;
+        stroke: tomato;
+        stroke-width: 10px;
+        stroke-linecap: round;
+
+        animation-name: animOutlineRotation;
+        @extend %animate;
+    }
+}
+
+@keyframes animOutlineRotation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 600;
+    }
+}
+
+.animation--4 {
+}
+
+.animation--5 {
+}
+
+.animation--6 {
+}
+
+.animation--7 {
+}
+
+.animation--8 {
+}
+
+.animation--9 {
+}
+
+.animation--10 {
+}

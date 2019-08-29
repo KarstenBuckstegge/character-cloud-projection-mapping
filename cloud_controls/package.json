@@ -1,0 +1,14 @@
+{
+  "name": "cloud_controls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "styles": "node-sass styles.scss -o ./ -w"
+  },
+  "author": "KarstenBuckstegge",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
