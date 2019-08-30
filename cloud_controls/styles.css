@@ -36,7 +36,8 @@
   fill: #0b5999; }
 
 .character-cloud * {
-  animation-duration: inherit; }
+  animation-duration: inherit;
+  transform-origin: center; }
 
 .control {
   padding: 8px 32px; }
@@ -67,7 +68,7 @@
   0% {
     filter: hue-rotate(0deg); }
   100% {
-    filter: hue-rotate(720deg); } }
+    filter: hue-rotate(360deg); } }
 
 .animation--5 {
   filter: saturate(0); }

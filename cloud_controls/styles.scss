@@ -52,6 +52,7 @@ $blue: #0b5999;
 .character-cloud {
     * {
         animation-duration: inherit;
+        transform-origin: center;
     }
 }
 
@@ -102,7 +103,7 @@ $blue: #0b5999;
         filter: hue-rotate(0deg);
     }
     100% {
-        filter: hue-rotate(720deg);
+        filter: hue-rotate(360deg);
     }
 }
 
