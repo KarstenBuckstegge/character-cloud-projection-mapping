@@ -2,7 +2,7 @@ const cloud = document.querySelector('#character-cloud');
 const controls = document.querySelectorAll('.control');
 
 let animationSpeed = 2;
-const animationSpeedStep = .4;
+const animationSpeedStep = .6;
 
 const setAnimationSpeed = (animationInt) => {
     let animationSpeedTemp = 0;
@@ -13,7 +13,7 @@ const setAnimationSpeed = (animationInt) => {
         animationSpeedTemp = animationSpeed - animationSpeedStep;
     }
 
-    if (animationSpeedTemp > 0.2 && animationSpeedTemp < 6) {
+    if (animationSpeedTemp > 0.1 && animationSpeedTemp < 5.1) {
         animationSpeed = animationSpeedTemp;
     }
 
