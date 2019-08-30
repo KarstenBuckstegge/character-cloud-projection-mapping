@@ -56,6 +56,10 @@ $blue: #0b5999;
     }
 }
 
+.character {
+    transition: opacity 1s;
+}
+
 .control {
     padding: 8px 32px;
 }

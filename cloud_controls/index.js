@@ -40,6 +40,8 @@ let animationSpeed = 2;
 const animationSpeedStep = .6;
 
 let audioCtx;
+let hideCharacters = false;
+let hideCharLoop;
 
 const setAnimationSpeed = animationInt => {
     let animationSpeedTemp = 0;
@@ -55,16 +57,41 @@ const setAnimationSpeed = animationInt => {
     }
 
     cloud.style.animationDuration = `${animationSpeed}s`;
+    speedChangeCharHide();
 }
 
-const runAnimation = animationInt => {
-    if (animationInt <= 2) {
-        setAnimationSpeed(animationInt);
-    } else if (animationInt === 10) {
-        initAudio();
+const getRandomCharacter = () => {
+    const i = Math.max(0, Math.round(Math.random() * allCharacters.length - 1));
+
+    return allCharacters[i];
+}
+
+const hideCharacter = () => {
+    const charName = getRandomCharacter();
+
+    const char = document.querySelector(`.${charName}`);
+    char.style.opacity = 0;
+
+    setTimeout(() => {
+        char.style.opacity = 1;
+    }, 2500);
+}
+
+const hideRandomCharacter = () => {
+    if (!hideCharacters) {
+        hideCharLoop = setInterval(hideCharacter, animationSpeed * 500);
     } else {
-        containerElement.classList.toggle(`animation--${animationInt}`);
+        clearInterval(hideCharLoop);
     }
+
+    hideCharacters = !hideCharacters;
+}
+
+const speedChangeCharHide = () => {
+    if (!hideCharacters) { return; };
+
+    clearInterval(hideCharLoop);
+    hideCharLoop = setInterval(hideCharacter, animationSpeed * 500);
 }
 
 const initAudio = () => {
@@ -144,6 +171,18 @@ const initAudio = () => {
     navigator.mediaDevices.getUserMedia({ audio: true, video: false })
     .then(useInputMedia)
 };
+
+const runAnimation = animationInt => {
+    if (animationInt <= 2) {
+        setAnimationSpeed(animationInt);
+    } else if (animationInt === 9) {
+        hideRandomCharacter();
+    } else if (animationInt === 10) {
+        initAudio();
+    } else {
+        containerElement.classList.toggle(`animation--${animationInt}`);
+    }
+}
 
 const init = () => {
     cloud.style.animationDuration = `${animationSpeed}s`;

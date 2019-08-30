@@ -39,6 +39,9 @@
   animation-duration: inherit;
   transform-origin: center; }
 
+.character {
+  transition: opacity 1s; }
+
 .control {
   padding: 8px 32px; }
 
