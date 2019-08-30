@@ -44,11 +44,12 @@
 .animation--3 .outline path {
   animation-direction: alternate;
   animation-duration: inherit;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
 
 .animation--3 .outline path {
   stroke-dasharray: 300;
-  stroke: tomato;
+  stroke: url(#gradient);
   stroke-width: 10px;
   stroke-linecap: round;
   animation-name: animOutlineRotation; }

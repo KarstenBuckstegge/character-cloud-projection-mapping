@@ -63,6 +63,7 @@ $blue: #0b5999;
     animation-direction: alternate;
     animation-duration: inherit;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 // ============ ANIMATION DEFINITIONS ============
@@ -71,7 +72,7 @@ $blue: #0b5999;
 .animation--3 {
     .outline path {
         stroke-dasharray: 300;
-        stroke: tomato;
+        stroke: url(#gradient);
         stroke-width: 10px;
         stroke-linecap: round;
 
