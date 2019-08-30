@@ -50,14 +50,20 @@ $blue: #0b5999;
 }
 
 .character-cloud {
+    will-change: filter;
+
     * {
         animation-duration: inherit;
         transform-origin: center;
     }
 }
 
-.character {
-    transition: opacity 1s;
+.outline {
+    will-change: transform;
+
+    path {
+        will-change: stroke-dashoffset;
+    }
 }
 
 .control {
@@ -120,13 +126,24 @@ $blue: #0b5999;
 }
 
 .animation--7 {
+    .character .outline {
+        animation: outlineBounce reverse infinite;
+        animation-duration: inherit;
+        animation-timing-function: cubic-bezier(1,.01,.07,.99);
+    }
+
+    @for $i from 0 to 26 {
+        .character:nth-of-type(#{$i}) .outline {
+            transform: scale(#{(random(20) / 10) + 0.5});
+            animation-delay: #{random(10)/ 10}s;
+            opacity: 0;
+        }
+    }
 }
 
-.animation--8 {
-}
-
-.animation--9 {
-}
-
-.animation--10 {
+@keyframes outlineBounce {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

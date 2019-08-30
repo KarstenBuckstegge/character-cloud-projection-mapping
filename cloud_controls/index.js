@@ -36,6 +36,8 @@ const allCharacters = [
     'Maggot'
 ]
 
+const allCharacterElements = [];
+
 let animationSpeed = 2;
 const animationSpeedStep = .6;
 
@@ -61,14 +63,13 @@ const setAnimationSpeed = animationInt => {
 
 const getRandomCharacter = () => {
     const i = Math.max(0, Math.round(Math.random() * allCharacters.length - 1));
-
-    return allCharacters[i];
+    return i;
 }
 
 const hideCharacter = () => {
-    const charName = getRandomCharacter();
+    const charId = getRandomCharacter();
 
-    const char = document.querySelector(`.${charName}`);
+    const char = allCharacterElements[charId];
     char.style.opacity = 0;
 
     setTimeout(() => {
@@ -76,7 +77,7 @@ const hideCharacter = () => {
     }, 2500);
 }
 
-const hideRandomCharacter = () => {
+const hideCharactersLoop = () => {
     if (!hideCharacters) {
         hideCharLoop = setInterval(hideCharacter, animationSpeed * 500);
     } else {
@@ -93,11 +94,18 @@ const speedChangeCharHide = () => {
     hideCharLoop = setInterval(hideCharacter, animationSpeed * 500);
 }
 
+const queryAllCharacterElements = () => {
+    allCharacters.forEach(charName => {
+        const charElement = document.querySelector(`.${charName}`);
+        allCharacterElements.push(charElement);
+    });
+};
+
 const runAnimation = animationInt => {
     if (animationInt <= 2) {
         setAnimationSpeed(animationInt);
     } else if (animationInt === 9) {
-        hideRandomCharacter();
+        hideCharactersLoop();
     } else {
         containerElement.classList.toggle(`animation--${animationInt}`);
     }
@@ -113,6 +121,7 @@ const init = () => {
             runAnimation(animationInt); 
         })
     });
+    queryAllCharacterElements();
 }
 
 

@@ -35,12 +35,16 @@
 .blue {
   fill: #0b5999; }
 
-.character-cloud * {
-  animation-duration: inherit;
-  transform-origin: center; }
+.character-cloud {
+  will-change: filter; }
+  .character-cloud * {
+    animation-duration: inherit;
+    transform-origin: center; }
 
-.character {
-  transition: opacity 1s; }
+.outline {
+  will-change: transform; }
+  .outline path {
+    will-change: stroke-dashoffset; }
 
 .control {
   padding: 8px 32px; }
@@ -78,3 +82,143 @@
 
 .animation--6 {
   filter: sepia(1); }
+
+.animation--7 .character .outline {
+  animation: outlineBounce reverse infinite;
+  animation-duration: inherit;
+  animation-timing-function: cubic-bezier(1, 0.01, 0.07, 0.99); }
+
+.animation--7 .character:nth-of-type(0) .outline {
+  transform: scale(1.5);
+  animation-delay: 0.7s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(1) .outline {
+  transform: scale(0.9);
+  animation-delay: 0.5s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(2) .outline {
+  transform: scale(1);
+  animation-delay: 0.3s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(3) .outline {
+  transform: scale(1.4);
+  animation-delay: 0.1s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(4) .outline {
+  transform: scale(2);
+  animation-delay: 0.7s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(5) .outline {
+  transform: scale(1.4);
+  animation-delay: 0.8s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(6) .outline {
+  transform: scale(2.1);
+  animation-delay: 0.6s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(7) .outline {
+  transform: scale(1.7);
+  animation-delay: 1s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(8) .outline {
+  transform: scale(0.6);
+  animation-delay: 0.9s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(9) .outline {
+  transform: scale(0.7);
+  animation-delay: 0.5s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(10) .outline {
+  transform: scale(2.1);
+  animation-delay: 0.7s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(11) .outline {
+  transform: scale(1.9);
+  animation-delay: 0.1s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(12) .outline {
+  transform: scale(1);
+  animation-delay: 0.1s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(13) .outline {
+  transform: scale(1.2);
+  animation-delay: 0.7s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(14) .outline {
+  transform: scale(0.8);
+  animation-delay: 0.3s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(15) .outline {
+  transform: scale(1.8);
+  animation-delay: 0.8s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(16) .outline {
+  transform: scale(1.3);
+  animation-delay: 0.6s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(17) .outline {
+  transform: scale(1.9);
+  animation-delay: 0.4s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(18) .outline {
+  transform: scale(1.9);
+  animation-delay: 0.2s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(19) .outline {
+  transform: scale(1.7);
+  animation-delay: 0.9s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(20) .outline {
+  transform: scale(0.9);
+  animation-delay: 0.6s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(21) .outline {
+  transform: scale(1.1);
+  animation-delay: 1s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(22) .outline {
+  transform: scale(1);
+  animation-delay: 1s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(23) .outline {
+  transform: scale(0.7);
+  animation-delay: 1s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(24) .outline {
+  transform: scale(1.5);
+  animation-delay: 0.2s;
+  opacity: 0; }
+
+.animation--7 .character:nth-of-type(25) .outline {
+  transform: scale(1.3);
+  animation-delay: 0.3s;
+  opacity: 0; }
+
+@keyframes outlineBounce {
+  to {
+    transform: scale(1);
+    opacity: 1; } }
