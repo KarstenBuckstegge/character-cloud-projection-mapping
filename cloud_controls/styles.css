@@ -41,7 +41,7 @@
 .control {
   padding: 8px 32px; }
 
-.animation--3 .outline path {
+.animation--3 .outline path, .animation--4 {
   animation-direction: alternate;
   animation-duration: inherit;
   animation-iteration-count: infinite;
@@ -59,3 +59,12 @@
     stroke-dashoffset: 0; }
   100% {
     stroke-dashoffset: 600; } }
+
+.animation--4 {
+  animation-name: animHueRotation; }
+
+@keyframes animHueRotation {
+  0% {
+    filter: hue-rotate(0deg); }
+  100% {
+    filter: hue-rotate(720deg); } }

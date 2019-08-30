@@ -91,6 +91,17 @@ $blue: #0b5999;
 }
 
 .animation--4 {
+    animation-name: animHueRotation;
+    @extend %animate;
+}
+
+@keyframes animHueRotation {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(720deg);
+    }
 }
 
 .animation--5 {
