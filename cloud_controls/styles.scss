@@ -70,7 +70,7 @@ $blue: #0b5999;
 // (Starts with 3 because 1 and 2 are speed controls)
 
 .animation--3 {
-    .outline path {
+    .character-cloud .outline path {
         stroke-dasharray: 300;
         stroke: url(#gradient);
         stroke-width: 10px;
@@ -91,8 +91,10 @@ $blue: #0b5999;
 }
 
 .animation--4 {
-    animation-name: animHueRotation;
-    @extend %animate;
+    .character-cloud {
+        animation-name: animHueRotation;
+        @extend %animate;
+    }
 }
 
 @keyframes animHueRotation {
@@ -105,9 +107,11 @@ $blue: #0b5999;
 }
 
 .animation--5 {
+    filter: saturate(0);
 }
 
 .animation--6 {
+    filter: sepia(1);
 }
 
 .animation--7 {

@@ -41,13 +41,13 @@
 .control {
   padding: 8px 32px; }
 
-.animation--3 .outline path, .animation--4 {
+.animation--3 .character-cloud .outline path, .animation--4 .character-cloud {
   animation-direction: alternate;
   animation-duration: inherit;
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
 
-.animation--3 .outline path {
+.animation--3 .character-cloud .outline path {
   stroke-dasharray: 300;
   stroke: url(#gradient);
   stroke-width: 10px;
@@ -60,7 +60,7 @@
   100% {
     stroke-dashoffset: 600; } }
 
-.animation--4 {
+.animation--4 .character-cloud {
   animation-name: animHueRotation; }
 
 @keyframes animHueRotation {
@@ -68,3 +68,9 @@
     filter: hue-rotate(0deg); }
   100% {
     filter: hue-rotate(720deg); } }
+
+.animation--5 {
+  filter: saturate(0); }
+
+.animation--6 {
+  filter: sepia(1); }

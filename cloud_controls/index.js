@@ -1,3 +1,4 @@
+const containerElement = document.querySelector('.container');
 const cloud = document.querySelector('#character-cloud');
 const controls = document.querySelectorAll('.control');
 
@@ -26,7 +27,7 @@ const runAnimation = (animationInt) => {
     if (animationInt <= 2) {
         setAnimationSpeed(animationInt);
     } else {
-        cloud.classList.toggle(`animation--${animationInt}`);
+        containerElement.classList.toggle(`animation--${animationInt}`);
     }
 }
 
