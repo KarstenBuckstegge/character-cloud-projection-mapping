@@ -104,7 +104,7 @@ const queryAllCharacterElements = () => {
 const runAnimation = animationInt => {
     if (animationInt <= 2) {
         setAnimationSpeed(animationInt);
-    } else if (animationInt === 9) {
+    } else if (animationInt === 8) {
         hideCharactersLoop();
     } else {
         containerElement.classList.toggle(`animation--${animationInt}`);
