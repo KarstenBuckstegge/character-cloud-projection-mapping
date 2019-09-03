@@ -111,12 +111,27 @@ const runAnimation = animationInt => {
     }
 }
 
+const newPhoneInput = input => {
+    console.log('input:', input);
+
+    const numInput = parseInt(input);
+
+    if (input === 'hung up' || input === 'picked up') {
+        console.log('input');
+    } else if (numInput > 0 && numInput < 9) {
+        runAnimation(numInput);
+    } else {
+        console.error(`unknown input ${input}`);
+    }
+}
+
 const connectToWebsocket = () => {
     socket = new WebSocket('ws://localhost:3000');
 
     socket.onopen = () => console.log('connected to', socket);
     socket.onerror = err => console.error('WebSocket error', err);
-    socket.onmessage = message => console.log('message: ', message.data);
+
+    socket.onmessage = message => newPhoneInput(message.data);
 }
 
 const init = () => {

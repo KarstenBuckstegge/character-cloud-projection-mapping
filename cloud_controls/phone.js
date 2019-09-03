@@ -11,7 +11,7 @@ wss.on('connection', (ws) => {
     console.log('Client connected to WebSocket');
 
     // read serial input
-    const serial = new SerialPort(path, { baudRate: 9600 })
+    const serial = new SerialPort(path, { baudRate: 115200 })
     const parser = new Readline()
     serial.pipe(parser)
     
