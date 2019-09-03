@@ -111,6 +111,14 @@ const runAnimation = animationInt => {
     }
 }
 
+const connectToWebsocket = () => {
+    socket = new WebSocket('ws://localhost:3000');
+
+    socket.onopen = () => console.log('connected to', socket);
+    socket.onerror = err => console.error('WebSocket error', err);
+    socket.onmessage = message => console.log('message: ', message.data);
+}
+
 const init = () => {
     cloud.style.animationDuration = `${animationSpeed}s`;
 
@@ -122,6 +130,8 @@ const init = () => {
         })
     });
     queryAllCharacterElements();
+
+    connectToWebsocket();
 }
 
 
