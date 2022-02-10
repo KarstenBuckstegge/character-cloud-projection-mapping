@@ -9,7 +9,7 @@
   "author": "KarstenBuckstegge",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "@serialport/parser-readline": "^2.0.2",
