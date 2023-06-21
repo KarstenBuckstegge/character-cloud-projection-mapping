@@ -8,12 +8,9 @@
   },
   "author": "KarstenBuckstegge",
   "license": "MIT",
-  "devDependencies": {
-    "node-sass": "^4.12.0"
-  },
   "dependencies": {
-    "@serialport/parser-readline": "^2.0.2",
-    "serialport": "^7.1.5",
-    "ws": "^7.1.2"
+    "@serialport/parser-readline": "latest",
+    "serialport": "latest",
+    "ws": "latest"
   }
 }
